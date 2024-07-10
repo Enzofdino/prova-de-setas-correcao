@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour
 
     void AtualizarSetas(KeyCode[] setas)
     {
-       for(int i = 0; i < setas.Length; i++)
+        for (int i = 0; i < setas.Length; i++)
         {
             if (i >= setas.Length)
             {
@@ -43,8 +43,8 @@ public class UIManager : MonoBehaviour
             imagens[i].color = Color.white;
         }
     }
-    
-    void AtualizarSetas(int setaSelecionada,bool acertou)
+
+    void AtualizarSetas(int setaSelecionada, bool acertou)
     {
         if (acertou)
         {
@@ -55,5 +55,9 @@ public class UIManager : MonoBehaviour
             imagens[setaSelecionada].color = Color.red;
         }
     }
-
+    void AtualizarTextos(int pontuacao, float relogio)
+    {
+        textoDePontuacao.text = pontuacao.ToString();
+        textodorelogio.text = pontuacao.ToString();
+    }
 }

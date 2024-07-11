@@ -42,19 +42,19 @@ public class GameManager : MonoBehaviour
 
         //UIManagaer.instance.AtualizarTextos(pontos,relogio);
 
-        if( relogio <= 0)
+        if (relogio <= 0)
         {
             pontos -= teclas.Length - teclaAtual;
-            GerarSetas() ;
+            GerarSetas();
         }
     }
     void GerarSetas()
     {
         teclaAtual = 0;
-        teclas = new KeyCode[Random.Range(5,15)];
-        for(int i = 0; i < teclas.Length; i++)
+        teclas = new KeyCode[Random.Range(5, 15)];
+        for (int i = 0; i < teclas.Length; i++)
         {
-            teclas[i] = (KeyCode)Random.Range(273,276);
+            teclas[i] = (KeyCode)Random.Range(273, 276);
         }
         relogio = teclas.Length / 2;
         //UIManager.instance.AtualizarSetas(teclas);
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     void ChecarTecla(KeyCode teclaPressionada)
     {
-        if(teclaPressionada == teclas[teclaAtual])
+        if (teclaPressionada == teclas[teclaAtual])
         {
             pontos++;
             //UIManager.instance.AtualizarSeta(teclaAtual,true);
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
         }
         //UIManager.instance.AtualizarSeta(pontos,relogio);
         teclaAtual++;
-        if(teclaAtual == 0)
+        if (teclaAtual == 0)
         {
 
         }
